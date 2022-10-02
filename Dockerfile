@@ -12,6 +12,7 @@ RUN pip install "poetry==$POETRY_VERSION"
 WORKDIR /code
 COPY pyproject.toml /code/
 COPY templates /code/templates
+COPY static /code/static
 
 # Project initialization:
 RUN poetry config virtualenvs.create false && poetry install --no-interaction --no-ansi --no-root
