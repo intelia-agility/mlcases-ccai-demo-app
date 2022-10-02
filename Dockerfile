@@ -2,7 +2,8 @@
 
 FROM python:3.9-slim-buster
 
-ENV POETRY_VERSION=1.2 
+ENV POETRY_VERSION=1.2\
+    PORT=8080 
 
 # Install poetry
 RUN pip install "poetry==$POETRY_VERSION"
